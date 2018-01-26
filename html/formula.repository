@@ -1,0 +1,15 @@
+\form#0:$AX=B$
+\form#1:$n*n$
+\form#2:$ m*n$
+\form#3:$ (row,col)$
+\form#4:$ (row,col) $
+\form#5:$ A*B $
+\form#6:$ A=B $
+\form#7:$ M^T $
+\form#8:$ \langle A | B \rangle $
+\form#9:$ A + B $
+\form#10:$ A-B $
+\form#11:$ -A $
+\form#12:$ k*M $
+\form#13:$ AX = B $
+\form#14:$LX=B$

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Implémentation d&#39;une matrice CSR et utilisation de cette matrice pour la résolution de système linéaire: Référence du fichier Source/CSR.f90</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Implémentation d&#39;une matrice CSR et utilisation de cette matrice pour la résolution de système linéaire
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Les types de données</a> &#124;
+<a href="#namespaces">Modules</a> &#124;
+<a href="#func-members">Fonctions/Subroutines</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier CSR.f90</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Les types de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcsr_1_1csr__matrix.html">csr::csr_matrix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type décrivant une matrice CSR Attention m_col stocke l'index des colonnes en commencant par 1. [CSR].  <a href="structcsr_1_1csr__matrix.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Modules</h2></td></tr>
+<tr class="memitem:namespacecsr"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html">csr</a></td></tr>
+<tr class="memdesc:namespacecsr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce module permet de créer,stocker et manipuler une matrice sous la forme CSR. Plusieurs opérations courantes sont implémentés, avec certains rafinement pour le cas de vecteur. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions/Subroutines</h2></td></tr>
+<tr class="memitem:a7c17472010c7e69ffd17ec4356c9f728"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a7c17472010c7e69ffd17ec4356c9f728">csr::create_csr_matrix_from_file</a> (f)</td></tr>
+<tr class="memdesc:a7c17472010c7e69ffd17ec4356c9f728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de créer une matrice depuis un fichier. La matrice dans le fichier doit utilisé le style C-CSR modifié pour que les colonnes commence par être indexé par 1. <b>On admet que le fichier passé est valide</b>  <a href="namespacecsr.html#a7c17472010c7e69ffd17ec4356c9f728">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7c17472010c7e69ffd17ec4356c9f728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5e0b3125acf11371632207330c5a4e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a6a5e0b3125acf11371632207330c5a4e">csr::csr_matrix_save_to_file</a> (M, f)</td></tr>
+<tr class="memdesc:a6a5e0b3125acf11371632207330c5a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine permet de sauvegarder une matrice CSR dans un fichier.  <a href="namespacecsr.html#a6a5e0b3125acf11371632207330c5a4e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6a5e0b3125acf11371632207330c5a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2097f50c520ff79497b0a8a5cfafd042"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a2097f50c520ff79497b0a8a5cfafd042">csr::create_csr_matrix_square</a> (n)</td></tr>
+<tr class="memdesc:a2097f50c520ff79497b0a8a5cfafd042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de créer une matrice carrée vide.  <a href="namespacecsr.html#a2097f50c520ff79497b0a8a5cfafd042">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2097f50c520ff79497b0a8a5cfafd042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bd83887f4ef4f225a9468ba4cb7667"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a42bd83887f4ef4f225a9468ba4cb7667">csr::create_csr_matrix_recopy</a> (M)</td></tr>
+<tr class="memdesc:a42bd83887f4ef4f225a9468ba4cb7667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de dupliquer une matrice.  <a href="namespacecsr.html#a42bd83887f4ef4f225a9468ba4cb7667">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a42bd83887f4ef4f225a9468ba4cb7667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb507b2f3df37a31432acce41c014ed"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed">csr::create_csr_matrix</a> (m, n)</td></tr>
+<tr class="memdesc:afdb507b2f3df37a31432acce41c014ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction crée une matrice de taille quelconque.  <a href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afdb507b2f3df37a31432acce41c014ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f6ffb7bbc5ad17554784f8a26b7a48"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">csr::free_csr_matrix</a> (M)</td></tr>
+<tr class="memdesc:a72f6ffb7bbc5ad17554784f8a26b7a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine permet de détruire une matrice CSR.  <a href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a72f6ffb7bbc5ad17554784f8a26b7a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c21bd90e70806fc8e86f7c152432bc1"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a1c21bd90e70806fc8e86f7c152432bc1">csr::is_in_matrix</a> (M, row, col)</td></tr>
+<tr class="memdesc:a1c21bd90e70806fc8e86f7c152432bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de vérifier que des indices sont bien valide pour une matrice donnée.  <a href="namespacecsr.html#a1c21bd90e70806fc8e86f7c152432bc1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1c21bd90e70806fc8e86f7c152432bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f29a51746afa4930b949e72bd78dfa"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#ab0f29a51746afa4930b949e72bd78dfa">csr::is_column_vector</a> (V)</td></tr>
+<tr class="memdesc:ab0f29a51746afa4930b949e72bd78dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de vérifier si une matrice est un vecteur colonne.  <a href="namespacecsr.html#ab0f29a51746afa4930b949e72bd78dfa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab0f29a51746afa4930b949e72bd78dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999ebe4269afb9334a0d6981d941c405"><td class="memItemLeft" align="right" valign="top">real(kind=selected_real_kind(15, 307)) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a999ebe4269afb9334a0d6981d941c405">csr::get</a> (M, row, col)</td></tr>
+<tr class="memdesc:a999ebe4269afb9334a0d6981d941c405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet d'obtnir la valeur d'un élément d'une matrice.  <a href="namespacecsr.html#a999ebe4269afb9334a0d6981d941c405">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a999ebe4269afb9334a0d6981d941c405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaba31314c53500fc138865272a804a9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">csr::set</a> (M, row, col, val)</td></tr>
+<tr class="memdesc:adaba31314c53500fc138865272a804a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine permet de modifier une valeur dans une matrice CSR.  <a href="namespacecsr.html#adaba31314c53500fc138865272a804a9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adaba31314c53500fc138865272a804a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb1d48b82c793ccaad532779a3066af"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a1cb1d48b82c793ccaad532779a3066af">csr::display_debug</a> (M)</td></tr>
+<tr class="memdesc:a1cb1d48b82c793ccaad532779a3066af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine affiche une matrice CSR avec des informations avancées.  <a href="namespacecsr.html#a1cb1d48b82c793ccaad532779a3066af">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1cb1d48b82c793ccaad532779a3066af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb5046e358a51cbc8ee7f7d3cd216186"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#afb5046e358a51cbc8ee7f7d3cd216186">csr::display</a> (M)</td></tr>
+<tr class="memdesc:afb5046e358a51cbc8ee7f7d3cd216186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine affiche une matrice CSR.  <a href="namespacecsr.html#afb5046e358a51cbc8ee7f7d3cd216186">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afb5046e358a51cbc8ee7f7d3cd216186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a166f3030adcb3acb408f2f505f6d5ca8"><td class="memItemLeft" align="right" valign="top">integer function, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a166f3030adcb3acb408f2f505f6d5ca8">csr::get_column_index</a> (M, row)</td></tr>
+<tr class="memdesc:a166f3030adcb3acb408f2f505f6d5ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet d'obtenir les colonnes non-nulles d'une ligne donnée.  <a href="namespacecsr.html#a166f3030adcb3acb408f2f505f6d5ca8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a166f3030adcb3acb408f2f505f6d5ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fddc3031fe45969bfad1e781aee76f2"><td class="memItemLeft" align="right" valign="top">real(kind=selected_real_kind(15, 307)) function, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a0fddc3031fe45969bfad1e781aee76f2">csr::get_column_value</a> (M, row)</td></tr>
+<tr class="memdesc:a0fddc3031fe45969bfad1e781aee76f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet d'obtenir les valeurs non-nulles d'une ligne donnée.  <a href="namespacecsr.html#a0fddc3031fe45969bfad1e781aee76f2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0fddc3031fe45969bfad1e781aee76f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77932e4e1232793cd4196bd9aa3729ba"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba">csr::csr_matrix_prod</a> (A, B)</td></tr>
+<tr class="memdesc:a77932e4e1232793cd4196bd9aa3729ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule le produit de deux matrices.  <a href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a77932e4e1232793cd4196bd9aa3729ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4283af9f49789afde336aa6c01f9d9b"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#ae4283af9f49789afde336aa6c01f9d9b">csr::csr_matrix_equal</a> (A, B)</td></tr>
+<tr class="memdesc:ae4283af9f49789afde336aa6c01f9d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de vérifier si deux matrices sont égales.  <a href="namespacecsr.html#ae4283af9f49789afde336aa6c01f9d9b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae4283af9f49789afde336aa6c01f9d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfa2c1141ac4deb38a1c1126cd78e99"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a5dfa2c1141ac4deb38a1c1126cd78e99">csr::tr</a> (M)</td></tr>
+<tr class="memdesc:a5dfa2c1141ac4deb38a1c1126cd78e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule la transposée d'une matrice.  <a href="namespacecsr.html#a5dfa2c1141ac4deb38a1c1126cd78e99">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5dfa2c1141ac4deb38a1c1126cd78e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41764fff6e7b431201994e36652d9694"><td class="memItemLeft" align="right" valign="top">real(kind=selected_real_kind(15, 307)) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a41764fff6e7b431201994e36652d9694">csr::csr_matrix_inner_product</a> (A, B)</td></tr>
+<tr class="memdesc:a41764fff6e7b431201994e36652d9694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule le produit scalaire de deux vecteurs.  <a href="namespacecsr.html#a41764fff6e7b431201994e36652d9694">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a41764fff6e7b431201994e36652d9694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722aeabca2222ff1bde30d72a2c7a867"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a722aeabca2222ff1bde30d72a2c7a867">csr::csr_matrix_vector_add</a> (A, B)</td></tr>
+<tr class="memdesc:a722aeabca2222ff1bde30d72a2c7a867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule la somme de deux vecteurs colonnes.  <a href="namespacecsr.html#a722aeabca2222ff1bde30d72a2c7a867">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a722aeabca2222ff1bde30d72a2c7a867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93101d039d6c2cd6d0c902f485c064b2"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a93101d039d6c2cd6d0c902f485c064b2">csr::csr_matrix_vector_sub</a> (A, B)</td></tr>
+<tr class="memdesc:a93101d039d6c2cd6d0c902f485c064b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule la différence de deux vecteurs colonnes.  <a href="namespacecsr.html#a93101d039d6c2cd6d0c902f485c064b2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a93101d039d6c2cd6d0c902f485c064b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3ba4cd4fa2fced5f77e5c9045b0a1d"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#aaa3ba4cd4fa2fced5f77e5c9045b0a1d">csr::csr_matrix_additive_inverse</a> (A)</td></tr>
+<tr class="memdesc:aaa3ba4cd4fa2fced5f77e5c9045b0a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule l'inverse associé à la loi additive d'une matrice.  <a href="namespacecsr.html#aaa3ba4cd4fa2fced5f77e5c9045b0a1d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aaa3ba4cd4fa2fced5f77e5c9045b0a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175e328c4d942f51e3bae61006e9002f"><td class="memItemLeft" align="right" valign="top">type(csr_matrix) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a175e328c4d942f51e3bae61006e9002f">csr::csr_matrix_scalar_prod</a> (M, K)</td></tr>
+<tr class="memdesc:a175e328c4d942f51e3bae61006e9002f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule le produit entre un réel et une matrice.  <a href="namespacecsr.html#a175e328c4d942f51e3bae61006e9002f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a175e328c4d942f51e3bae61006e9002f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

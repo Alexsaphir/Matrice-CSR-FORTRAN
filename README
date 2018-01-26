@@ -1,0 +1,13 @@
+Implémentation d'une matrice CSR et utilisation de cette matrice pour la résolution de système linéaire 
+
+Pour compiler, executer 'compile.sh'
+
+Le dossier Source contient l'ensemble des fichiers sources.
+
+Le dossier html contient les fichiers nécéssaire à la documentation
+
+Le fichier Documentation.html permet d'accéder à la documentation locale.
+
+Le fichier Documentation.pdf est une version de la documentation sous format pdf (deprecated).
+
+Il est préferable d'utiliser Docuentation.html.

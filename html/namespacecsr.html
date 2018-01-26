@@ -1,0 +1,1306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Implémentation d&#39;une matrice CSR et utilisation de cette matrice pour la résolution de système linéaire: Référence du module csr</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Implémentation d&#39;une matrice CSR et utilisation de cette matrice pour la résolution de système linéaire
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Les types de données</a> &#124;
+<a href="#func-members">Fonctions/Subroutines</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du module csr</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module permet de créer,stocker et manipuler une matrice sous la forme CSR. Plusieurs opérations courantes sont implémentés, avec certains rafinement pour le cas de vecteur.  
+<a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Les types de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type décrivant une matrice CSR Attention m_col stocke l'index des colonnes en commencant par 1. [CSR].  <a href="structcsr_1_1csr__matrix.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions/Subroutines</h2></td></tr>
+<tr class="memitem:a7c17472010c7e69ffd17ec4356c9f728"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a7c17472010c7e69ffd17ec4356c9f728">create_csr_matrix_from_file</a> (f)</td></tr>
+<tr class="memdesc:a7c17472010c7e69ffd17ec4356c9f728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de créer une matrice depuis un fichier. La matrice dans le fichier doit utilisé le style C-CSR modifié pour que les colonnes commence par être indexé par 1. <b>On admet que le fichier passé est valide</b>  <a href="#a7c17472010c7e69ffd17ec4356c9f728">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7c17472010c7e69ffd17ec4356c9f728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5e0b3125acf11371632207330c5a4e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a6a5e0b3125acf11371632207330c5a4e">csr_matrix_save_to_file</a> (M, f)</td></tr>
+<tr class="memdesc:a6a5e0b3125acf11371632207330c5a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine permet de sauvegarder une matrice CSR dans un fichier.  <a href="#a6a5e0b3125acf11371632207330c5a4e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6a5e0b3125acf11371632207330c5a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2097f50c520ff79497b0a8a5cfafd042"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a2097f50c520ff79497b0a8a5cfafd042">create_csr_matrix_square</a> (n)</td></tr>
+<tr class="memdesc:a2097f50c520ff79497b0a8a5cfafd042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de créer une matrice carrée vide.  <a href="#a2097f50c520ff79497b0a8a5cfafd042">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2097f50c520ff79497b0a8a5cfafd042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bd83887f4ef4f225a9468ba4cb7667"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a42bd83887f4ef4f225a9468ba4cb7667">create_csr_matrix_recopy</a> (M)</td></tr>
+<tr class="memdesc:a42bd83887f4ef4f225a9468ba4cb7667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de dupliquer une matrice.  <a href="#a42bd83887f4ef4f225a9468ba4cb7667">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a42bd83887f4ef4f225a9468ba4cb7667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb507b2f3df37a31432acce41c014ed"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed">create_csr_matrix</a> (m, n)</td></tr>
+<tr class="memdesc:afdb507b2f3df37a31432acce41c014ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction crée une matrice de taille quelconque.  <a href="#afdb507b2f3df37a31432acce41c014ed">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afdb507b2f3df37a31432acce41c014ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f6ffb7bbc5ad17554784f8a26b7a48"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">free_csr_matrix</a> (M)</td></tr>
+<tr class="memdesc:a72f6ffb7bbc5ad17554784f8a26b7a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine permet de détruire une matrice CSR.  <a href="#a72f6ffb7bbc5ad17554784f8a26b7a48">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a72f6ffb7bbc5ad17554784f8a26b7a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c21bd90e70806fc8e86f7c152432bc1"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a1c21bd90e70806fc8e86f7c152432bc1">is_in_matrix</a> (M, row, col)</td></tr>
+<tr class="memdesc:a1c21bd90e70806fc8e86f7c152432bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de vérifier que des indices sont bien valide pour une matrice donnée.  <a href="#a1c21bd90e70806fc8e86f7c152432bc1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1c21bd90e70806fc8e86f7c152432bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f29a51746afa4930b949e72bd78dfa"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#ab0f29a51746afa4930b949e72bd78dfa">is_column_vector</a> (V)</td></tr>
+<tr class="memdesc:ab0f29a51746afa4930b949e72bd78dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de vérifier si une matrice est un vecteur colonne.  <a href="#ab0f29a51746afa4930b949e72bd78dfa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab0f29a51746afa4930b949e72bd78dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999ebe4269afb9334a0d6981d941c405"><td class="memItemLeft" align="right" valign="top">real(kind=selected_real_kind(15, 307)) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a999ebe4269afb9334a0d6981d941c405">get</a> (M, row, col)</td></tr>
+<tr class="memdesc:a999ebe4269afb9334a0d6981d941c405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet d'obtnir la valeur d'un élément d'une matrice.  <a href="#a999ebe4269afb9334a0d6981d941c405">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a999ebe4269afb9334a0d6981d941c405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaba31314c53500fc138865272a804a9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a> (M, row, col, val)</td></tr>
+<tr class="memdesc:adaba31314c53500fc138865272a804a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine permet de modifier une valeur dans une matrice CSR.  <a href="#adaba31314c53500fc138865272a804a9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adaba31314c53500fc138865272a804a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb1d48b82c793ccaad532779a3066af"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a1cb1d48b82c793ccaad532779a3066af">display_debug</a> (M)</td></tr>
+<tr class="memdesc:a1cb1d48b82c793ccaad532779a3066af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine affiche une matrice CSR avec des informations avancées.  <a href="#a1cb1d48b82c793ccaad532779a3066af">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1cb1d48b82c793ccaad532779a3066af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb5046e358a51cbc8ee7f7d3cd216186"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#afb5046e358a51cbc8ee7f7d3cd216186">display</a> (M)</td></tr>
+<tr class="memdesc:afb5046e358a51cbc8ee7f7d3cd216186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette subroutine affiche une matrice CSR.  <a href="#afb5046e358a51cbc8ee7f7d3cd216186">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afb5046e358a51cbc8ee7f7d3cd216186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a166f3030adcb3acb408f2f505f6d5ca8"><td class="memItemLeft" align="right" valign="top">integer function, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a166f3030adcb3acb408f2f505f6d5ca8">get_column_index</a> (M, row)</td></tr>
+<tr class="memdesc:a166f3030adcb3acb408f2f505f6d5ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet d'obtenir les colonnes non-nulles d'une ligne donnée.  <a href="#a166f3030adcb3acb408f2f505f6d5ca8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a166f3030adcb3acb408f2f505f6d5ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fddc3031fe45969bfad1e781aee76f2"><td class="memItemLeft" align="right" valign="top">real(kind=selected_real_kind(15, 307)) function, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a0fddc3031fe45969bfad1e781aee76f2">get_column_value</a> (M, row)</td></tr>
+<tr class="memdesc:a0fddc3031fe45969bfad1e781aee76f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet d'obtenir les valeurs non-nulles d'une ligne donnée.  <a href="#a0fddc3031fe45969bfad1e781aee76f2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0fddc3031fe45969bfad1e781aee76f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77932e4e1232793cd4196bd9aa3729ba"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba">csr_matrix_prod</a> (A, B)</td></tr>
+<tr class="memdesc:a77932e4e1232793cd4196bd9aa3729ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule le produit de deux matrices.  <a href="#a77932e4e1232793cd4196bd9aa3729ba">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a77932e4e1232793cd4196bd9aa3729ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4283af9f49789afde336aa6c01f9d9b"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#ae4283af9f49789afde336aa6c01f9d9b">csr_matrix_equal</a> (A, B)</td></tr>
+<tr class="memdesc:ae4283af9f49789afde336aa6c01f9d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction permet de vérifier si deux matrices sont égales.  <a href="#ae4283af9f49789afde336aa6c01f9d9b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae4283af9f49789afde336aa6c01f9d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfa2c1141ac4deb38a1c1126cd78e99"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a5dfa2c1141ac4deb38a1c1126cd78e99">tr</a> (M)</td></tr>
+<tr class="memdesc:a5dfa2c1141ac4deb38a1c1126cd78e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule la transposée d'une matrice.  <a href="#a5dfa2c1141ac4deb38a1c1126cd78e99">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5dfa2c1141ac4deb38a1c1126cd78e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41764fff6e7b431201994e36652d9694"><td class="memItemLeft" align="right" valign="top">real(kind=selected_real_kind(15, 307)) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a41764fff6e7b431201994e36652d9694">csr_matrix_inner_product</a> (A, B)</td></tr>
+<tr class="memdesc:a41764fff6e7b431201994e36652d9694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule le produit scalaire de deux vecteurs.  <a href="#a41764fff6e7b431201994e36652d9694">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a41764fff6e7b431201994e36652d9694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722aeabca2222ff1bde30d72a2c7a867"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a722aeabca2222ff1bde30d72a2c7a867">csr_matrix_vector_add</a> (A, B)</td></tr>
+<tr class="memdesc:a722aeabca2222ff1bde30d72a2c7a867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule la somme de deux vecteurs colonnes.  <a href="#a722aeabca2222ff1bde30d72a2c7a867">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a722aeabca2222ff1bde30d72a2c7a867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93101d039d6c2cd6d0c902f485c064b2"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a93101d039d6c2cd6d0c902f485c064b2">csr_matrix_vector_sub</a> (A, B)</td></tr>
+<tr class="memdesc:a93101d039d6c2cd6d0c902f485c064b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule la différence de deux vecteurs colonnes.  <a href="#a93101d039d6c2cd6d0c902f485c064b2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a93101d039d6c2cd6d0c902f485c064b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3ba4cd4fa2fced5f77e5c9045b0a1d"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#aaa3ba4cd4fa2fced5f77e5c9045b0a1d">csr_matrix_additive_inverse</a> (A)</td></tr>
+<tr class="memdesc:aaa3ba4cd4fa2fced5f77e5c9045b0a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule l'inverse associé à la loi additive d'une matrice.  <a href="#aaa3ba4cd4fa2fced5f77e5c9045b0a1d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aaa3ba4cd4fa2fced5f77e5c9045b0a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175e328c4d942f51e3bae61006e9002f"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecsr.html#a175e328c4d942f51e3bae61006e9002f">csr_matrix_scalar_prod</a> (M, K)</td></tr>
+<tr class="memdesc:a175e328c4d942f51e3bae61006e9002f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction calcule le produit entre un réel et une matrice.  <a href="#a175e328c4d942f51e3bae61006e9002f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a175e328c4d942f51e3bae61006e9002f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce module permet de créer,stocker et manipuler une matrice sous la forme CSR. Plusieurs opérations courantes sont implémentés, avec certains rafinement pour le cas de vecteur. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Mechineau Alexandre </dd></dl>
+</div><h2 class="groupheader">Documentation de la fonction/subroutine</h2>
+<a id="afdb507b2f3df37a31432acce41c014ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb507b2f3df37a31432acce41c014ed">&#9670;&nbsp;</a></span>create_csr_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type (<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::create_csr_matrix </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction crée une matrice de taille quelconque. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Nombre de ligne de la matrice </td></tr>
+    <tr><td class="paramname">n</td><td>Nombre de colonne de la matrice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Matrice CSR de taille <img class="formulaInl" alt="$ m*n$" src="form_2.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_afdb507b2f3df37a31432acce41c014ed_icgraph.png" border="0" usemap="#namespacecsr_afdb507b2f3df37a31432acce41c014ed_icgraph" alt=""/></div>
+<map name="namespacecsr_afdb507b2f3df37a31432acce41c014ed_icgraph" id="namespacecsr_afdb507b2f3df37a31432acce41c014ed_icgraph">
+<area shape="rect" id="node2" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="454,88,593,144"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="1249,336,1300,363"/>
+<area shape="rect" id="node5" href="namespacecsr.html#a2097f50c520ff79497b0a8a5cfafd042" title="Cette fonction permet de créer une matrice carrée vide. " alt="" coords="219,1061,371,1102"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="857,893,1032,920"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="857,1104,1032,1131"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="669,539,802,565"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="669,716,802,743"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="451,945,595,986"/>
+<area shape="rect" id="node14" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="451,1163,595,1205"/>
+<area shape="rect" id="node15" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba" title="Cette fonction calcule le produit de deux matrices. " alt="" coords="225,615,366,641"/>
+<area shape="rect" id="node16" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="455,321,592,362"/>
+<area shape="rect" id="node17" href="namespacecsr.html#a5dfa2c1141ac4deb38a1c1126cd78e99" title="Cette fonction calcule la transposée d&#39;une matrice. " alt="" coords="267,269,323,296"/>
+<area shape="rect" id="node18" href="namespaceunit__test.html#a13f8cd1c017c50edbd872e2396b9c5b2" title="unit_test::test_transpose_1" alt="" coords="433,219,613,245"/>
+<area shape="rect" id="node19" href="namespaceunit__test.html#a59b305531bf9799e9c396514d86f3045" title="unit_test::test_transpose_2" alt="" coords="433,269,613,296"/>
+<area shape="rect" id="node20" href="namespacecsr.html#a722aeabca2222ff1bde30d72a2c7a867" title="Cette fonction calcule la somme de deux vecteurs colonnes. " alt="" coords="205,67,385,93"/>
+<area shape="rect" id="node21" href="namespacecsr.html#a93101d039d6c2cd6d0c902f485c064b2" title="Cette fonction calcule la différence de deux vecteurs colonnes. " alt="" coords="205,168,385,195"/>
+<area shape="rect" id="node22" href="namespacelu.html#aef71f6951669fa61ee1221a606e77559" title="Fonction intérmédiare dans le calcul de LU. " alt="" coords="236,716,355,743"/>
+<area shape="rect" id="node23" href="namespacesolver.html#aabaed17811858571ade7dc2678835714" title="Résouds le système &#160;un utilisant la méthode substitution. " alt="" coords="220,995,371,1037"/>
+<area shape="rect" id="node24" href="namespacesolver.html#a9f8ce5d9e5f950d31b2c12a74df87112" title="Résouds le système &#160;un utilisant la méthode substitution inversée. " alt="" coords="214,1178,377,1219"/>
+<area shape="rect" id="node25" href="namespaceunit__test.html#a1b61b671f03ec80dd49b686dde9c102e" title="unit_test::test_set_1" alt="" coords="874,564,1015,591"/>
+<area shape="rect" id="node26" href="namespaceunit__test.html#a68feea8781b8790ca9a305d9ae2fefb3" title="unit_test::test_recopy" alt="" coords="661,805,809,832"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="1080,113,1201,140"/>
+<area shape="rect" id="node6" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="442,741,605,768"/>
+<area shape="rect" id="node7" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="677,1057,794,1084"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="1089,663,1192,689"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7c17472010c7e69ffd17ec4356c9f728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c17472010c7e69ffd17ec4356c9f728">&#9670;&nbsp;</a></span>create_csr_matrix_from_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type (<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::create_csr_matrix_from_file </td>
+          <td>(</td>
+          <td class="paramtype">character(len=*), intent(in)&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet de créer une matrice depuis un fichier. La matrice dans le fichier doit utilisé le style C-CSR modifié pour que les colonnes commence par être indexé par 1. <b>On admet que le fichier passé est valide</b> </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Fichier stockant une matrice CSR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Matrice CSR créé depuis le fichier </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a7c17472010c7e69ffd17ec4356c9f728_icgraph.png" border="0" usemap="#namespacecsr_a7c17472010c7e69ffd17ec4356c9f728_icgraph" alt=""/></div>
+<map name="namespacecsr_a7c17472010c7e69ffd17ec4356c9f728_icgraph" id="namespacecsr_a7c17472010c7e69ffd17ec4356c9f728_icgraph">
+<area shape="rect" id="node2" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="205,13,256,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a42bd83887f4ef4f225a9468ba4cb7667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42bd83887f4ef4f225a9468ba4cb7667">&#9670;&nbsp;</a></span>create_csr_matrix_recopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type (<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::create_csr_matrix_recopy </td>
+          <td>(</td>
+          <td class="paramtype">type (<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet de dupliquer une matrice. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Une matrice CSR que l'on souhaite recopier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une nouvelle matrice CSR avec les mêmes valeurs que la matrice passée en argument </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a42bd83887f4ef4f225a9468ba4cb7667_icgraph.png" border="0" usemap="#namespacecsr_a42bd83887f4ef4f225a9468ba4cb7667_icgraph" alt=""/></div>
+<map name="namespacecsr_a42bd83887f4ef4f225a9468ba4cb7667_icgraph" id="namespacecsr_a42bd83887f4ef4f225a9468ba4cb7667_icgraph">
+<area shape="rect" id="node2" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="217,5,355,61"/>
+<area shape="rect" id="node5" href="namespacecsr.html#aaa3ba4cd4fa2fced5f77e5c9045b0a1d" title="Cette fonction calcule l&#39;inverse associé à la loi additive d&#39;une matrice. " alt="" coords="205,86,367,127"/>
+<area shape="rect" id="node6" href="namespaceunit__test.html#a68feea8781b8790ca9a305d9ae2fefb3" title="unit_test::test_recopy" alt="" coords="212,152,360,179"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="415,41,536,68"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="584,77,635,104"/>
+<area shape="rect" id="node7" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="424,112,527,139"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2097f50c520ff79497b0a8a5cfafd042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2097f50c520ff79497b0a8a5cfafd042">&#9670;&nbsp;</a></span>create_csr_matrix_square()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type (<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::create_csr_matrix_square </td>
+          <td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet de créer une matrice carrée vide. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Taille d'un coté d'une matrice carrée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Matrice carrée de taille <img class="formulaInl" alt="$n*n$" src="form_1.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_cgraph.png" border="0" usemap="#namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_cgraph" alt=""/></div>
+<map name="namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_cgraph" id="namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed" title="Cette fonction crée une matrice de taille quelconque. " alt="" coords="205,13,357,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_icgraph.png" border="0" usemap="#namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_icgraph" alt=""/></div>
+<map name="namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_icgraph" id="namespacecsr_a2097f50c520ff79497b0a8a5cfafd042_icgraph">
+<area shape="rect" id="node2" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="205,195,368,221"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="981,43,1032,69"/>
+<area shape="rect" id="node5" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="608,93,783,120"/>
+<area shape="rect" id="node7" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="608,144,783,171"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="416,297,560,338"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="215,341,359,382"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="429,93,547,120"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="629,195,762,221"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="421,245,555,272"/>
+<area shape="rect" id="node6" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="831,195,933,221"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa3ba4cd4fa2fced5f77e5c9045b0a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3ba4cd4fa2fced5f77e5c9045b0a1d">&#9670;&nbsp;</a></span>csr_matrix_additive_inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::csr_matrix_additive_inverse </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction calcule l'inverse associé à la loi additive d'une matrice. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Matrice CSR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ -A $" src="form_11.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_aaa3ba4cd4fa2fced5f77e5c9045b0a1d_cgraph.png" border="0" usemap="#namespacecsr_aaa3ba4cd4fa2fced5f77e5c9045b0a1d_cgraph" alt=""/></div>
+<map name="namespacecsr_aaa3ba4cd4fa2fced5f77e5c9045b0a1d_cgraph" id="namespacecsr_aaa3ba4cd4fa2fced5f77e5c9045b0a1d_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#a42bd83887f4ef4f225a9468ba4cb7667" title="Cette fonction permet de dupliquer une matrice. " alt="" coords="215,5,367,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4283af9f49789afde336aa6c01f9d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4283af9f49789afde336aa6c01f9d9b">&#9670;&nbsp;</a></span>csr_matrix_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical function csr::csr_matrix_equal </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet de vérifier si deux matrices sont égales. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Matrice CSR </td></tr>
+    <tr><td class="paramname">B</td><td>Matrice CSR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ A=B $" src="form_6.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_cgraph.png" border="0" usemap="#namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_cgraph" alt=""/></div>
+<map name="namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_cgraph" id="namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#a999ebe4269afb9334a0d6981d941c405" title="Cette fonction permet d&#39;obtnir la valeur d&#39;un élément d&#39;une matrice. " alt="" coords="200,5,267,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_icgraph.png" border="0" usemap="#namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_icgraph" alt=""/></div>
+<map name="namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_icgraph" id="namespacecsr_ae4283af9f49789afde336aa6c01f9d9b_icgraph">
+<area shape="rect" id="node2" href="namespaceunit__test.html#a1b61b671f03ec80dd49b686dde9c102e" title="unit_test::test_set_1" alt="" coords="219,5,361,32"/>
+<area shape="rect" id="node5" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="223,56,357,83"/>
+<area shape="rect" id="node6" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="223,107,357,133"/>
+<area shape="rect" id="node7" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="218,158,362,199"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="218,223,362,265"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="203,289,377,316"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="203,340,377,367"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#a13f8cd1c017c50edbd872e2396b9c5b2" title="unit_test::test_transpose_1" alt="" coords="200,391,380,417"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#a59b305531bf9799e9c396514d86f3045" title="unit_test::test_transpose_2" alt="" coords="200,441,380,468"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#a68feea8781b8790ca9a305d9ae2fefb3" title="unit_test::test_recopy" alt="" coords="216,492,364,519"/>
+<area shape="rect" id="node3" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="428,260,531,287"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="579,260,629,287"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a41764fff6e7b431201994e36652d9694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41764fff6e7b431201994e36652d9694">&#9670;&nbsp;</a></span>csr_matrix_inner_product()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(kind=selected_real_kind(15, 307)) function csr::csr_matrix_inner_product </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction calcule le produit scalaire de deux vecteurs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Matrice CSR définissant un vecteur colonne </td></tr>
+    <tr><td class="paramname">B</td><td>Matrice CSR définissant un vecteur colonne </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ \langle A | B \rangle $" src="form_8.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a41764fff6e7b431201994e36652d9694_icgraph.png" border="0" usemap="#namespacecsr_a41764fff6e7b431201994e36652d9694_icgraph" alt=""/></div>
+<map name="namespacecsr_a41764fff6e7b431201994e36652d9694_icgraph" id="namespacecsr_a41764fff6e7b431201994e36652d9694_icgraph">
+<area shape="rect" id="node2" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="197,5,336,61"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="553,85,604,112"/>
+<area shape="rect" id="node5" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="198,137,335,178"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="384,28,505,55"/>
+<area shape="rect" id="node6" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="393,140,496,167"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a77932e4e1232793cd4196bd9aa3729ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77932e4e1232793cd4196bd9aa3729ba">&#9670;&nbsp;</a></span>csr_matrix_prod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::csr_matrix_prod </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction calcule le produit de deux matrices. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Matrice CSR </td></tr>
+    <tr><td class="paramname">B</td><td>Matrice CSR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ A*B $" src="form_5.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_cgraph.png" border="0" usemap="#namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_cgraph" alt=""/></div>
+<map name="namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_cgraph" id="namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed" title="Cette fonction crée une matrice de taille quelconque. " alt="" coords="195,5,347,32"/>
+<area shape="rect" id="node3" href="namespacecsr.html#a166f3030adcb3acb408f2f505f6d5ca8" title="Cette fonction permet d&#39;obtenir les colonnes non&#45;nulles d&#39;une ligne donnée. " alt="" coords="195,56,348,83"/>
+<area shape="rect" id="node4" href="namespacecsr.html#a0fddc3031fe45969bfad1e781aee76f2" title="Cette fonction permet d&#39;obtenir les valeurs non&#45;nulles d&#39;une ligne donnée. " alt="" coords="195,107,348,133"/>
+<area shape="rect" id="node5" href="namespacecsr.html#a999ebe4269afb9334a0d6981d941c405" title="Cette fonction permet d&#39;obtnir la valeur d&#39;un élément d&#39;une matrice. " alt="" coords="238,157,305,184"/>
+<area shape="rect" id="node6" href="namespacecsr.html#adaba31314c53500fc138865272a804a9" title="Cette subroutine permet de modifier une valeur dans une matrice CSR. " alt="" coords="238,208,305,235"/>
+<area shape="rect" id="node7" href="namespacecsr.html#a1c21bd90e70806fc8e86f7c152432bc1" title="Cette fonction permet de vérifier que des indices sont bien valide pour une matrice donnée..." alt="" coords="396,208,515,235"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_icgraph.png" border="0" usemap="#namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_icgraph" alt=""/></div>
+<map name="namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_icgraph" id="namespacecsr_a77932e4e1232793cd4196bd9aa3729ba_icgraph">
+<area shape="rect" id="node2" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="207,57,345,113"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="989,140,1040,166"/>
+<area shape="rect" id="node5" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="195,289,357,316"/>
+<area shape="rect" id="node7" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="597,230,772,257"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="597,129,772,156"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="411,281,544,308"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="411,332,544,358"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="613,383,757,424"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="405,442,549,483"/>
+<area shape="rect" id="node14" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="207,499,345,540"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="820,102,941,129"/>
+<area shape="rect" id="node6" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="419,180,536,206"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="829,306,932,333"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a5e0b3125acf11371632207330c5a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a5e0b3125acf11371632207330c5a4e">&#9670;&nbsp;</a></span>csr_matrix_save_to_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine csr::csr_matrix_save_to_file </td>
+          <td>(</td>
+          <td class="paramtype">class (<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>)&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(len=*), intent(in)&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette subroutine permet de sauvegarder une matrice CSR dans un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice CSR à sauver dans un fichier </td></tr>
+    <tr><td class="paramname">f</td><td>Fichier de sortier </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a175e328c4d942f51e3bae61006e9002f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175e328c4d942f51e3bae61006e9002f">&#9670;&nbsp;</a></span>csr_matrix_scalar_prod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::csr_matrix_scalar_prod </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(kind=selected_real_kind(15, 307)), intent(in)&#160;</td>
+          <td class="paramname"><em>K</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction calcule le produit entre un réel et une matrice. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice CSR </td></tr>
+    <tr><td class="paramname">K</td><td>un réel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ k*M $" src="form_12.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a175e328c4d942f51e3bae61006e9002f_icgraph.png" border="0" usemap="#namespacecsr_a175e328c4d942f51e3bae61006e9002f_icgraph" alt=""/></div>
+<map name="namespacecsr_a175e328c4d942f51e3bae61006e9002f_icgraph" id="namespacecsr_a175e328c4d942f51e3bae61006e9002f_icgraph">
+<area shape="rect" id="node2" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="236,5,375,61"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="423,20,544,47"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="592,20,643,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a722aeabca2222ff1bde30d72a2c7a867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a722aeabca2222ff1bde30d72a2c7a867">&#9670;&nbsp;</a></span>csr_matrix_vector_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::csr_matrix_vector_add </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction calcule la somme de deux vecteurs colonnes. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Matrice CSR définissant un vecteur colonne </td></tr>
+    <tr><td class="paramname">B</td><td>Matrice CSR définissant un vecteur colonne </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ A + B $" src="form_9.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_cgraph.png" border="0" usemap="#namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_cgraph" alt=""/></div>
+<map name="namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_cgraph" id="namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed" title="Cette fonction crée une matrice de taille quelconque. " alt="" coords="233,5,385,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_icgraph.png" border="0" usemap="#namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_icgraph" alt=""/></div>
+<map name="namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_icgraph" id="namespacecsr_a722aeabca2222ff1bde30d72a2c7a867_icgraph">
+<area shape="rect" id="node2" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="233,5,372,61"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="420,20,541,47"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="589,20,640,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a93101d039d6c2cd6d0c902f485c064b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93101d039d6c2cd6d0c902f485c064b2">&#9670;&nbsp;</a></span>csr_matrix_vector_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::csr_matrix_vector_sub </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction calcule la différence de deux vecteurs colonnes. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Matrice CSR définissant un vecteur colonne </td></tr>
+    <tr><td class="paramname">B</td><td>Matrice CSR définissant un vecteur colonne </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ A-B $" src="form_10.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_cgraph.png" border="0" usemap="#namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_cgraph" alt=""/></div>
+<map name="namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_cgraph" id="namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed" title="Cette fonction crée une matrice de taille quelconque. " alt="" coords="233,5,385,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_icgraph.png" border="0" usemap="#namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_icgraph" alt=""/></div>
+<map name="namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_icgraph" id="namespacecsr_a93101d039d6c2cd6d0c902f485c064b2_icgraph">
+<area shape="rect" id="node2" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="233,5,372,61"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="589,57,640,84"/>
+<area shape="rect" id="node3" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="420,28,541,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb5046e358a51cbc8ee7f7d3cd216186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb5046e358a51cbc8ee7f7d3cd216186">&#9670;&nbsp;</a></span>display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine csr::display </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette subroutine affiche une matrice CSR. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice à afficher </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_afb5046e358a51cbc8ee7f7d3cd216186_cgraph.png" border="0" usemap="#namespacecsr_afb5046e358a51cbc8ee7f7d3cd216186_cgraph" alt=""/></div>
+<map name="namespacecsr_afb5046e358a51cbc8ee7f7d3cd216186_cgraph" id="namespacecsr_afb5046e358a51cbc8ee7f7d3cd216186_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#a999ebe4269afb9334a0d6981d941c405" title="Cette fonction permet d&#39;obtnir la valeur d&#39;un élément d&#39;une matrice. " alt="" coords="143,5,209,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1cb1d48b82c793ccaad532779a3066af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb1d48b82c793ccaad532779a3066af">&#9670;&nbsp;</a></span>display_debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine csr::display_debug </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette subroutine affiche une matrice CSR avec des informations avancées. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice à afficher </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a72f6ffb7bbc5ad17554784f8a26b7a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f6ffb7bbc5ad17554784f8a26b7a48">&#9670;&nbsp;</a></span>free_csr_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine csr::free_csr_matrix </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>)&#160;</td>
+          <td class="paramname"><em>M</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette subroutine permet de détruire une matrice CSR. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice à désallouer </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a72f6ffb7bbc5ad17554784f8a26b7a48_icgraph.png" border="0" usemap="#namespacecsr_a72f6ffb7bbc5ad17554784f8a26b7a48_icgraph" alt=""/></div>
+<map name="namespacecsr_a72f6ffb7bbc5ad17554784f8a26b7a48_icgraph" id="namespacecsr_a72f6ffb7bbc5ad17554784f8a26b7a48_icgraph">
+<area shape="rect" id="node2" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="571,101,621,128"/>
+<area shape="rect" id="node3" href="namespaceunit__test.html#a1b61b671f03ec80dd49b686dde9c102e" title="unit_test::test_set_1" alt="" coords="211,45,353,72"/>
+<area shape="rect" id="node5" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="215,96,349,123"/>
+<area shape="rect" id="node6" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="215,147,349,173"/>
+<area shape="rect" id="node7" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="210,198,354,239"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="210,263,354,305"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="195,329,369,356"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="195,380,369,407"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#a13f8cd1c017c50edbd872e2396b9c5b2" title="unit_test::test_transpose_1" alt="" coords="192,431,372,457"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#a59b305531bf9799e9c396514d86f3045" title="unit_test::test_transpose_2" alt="" coords="192,481,372,508"/>
+<area shape="rect" id="node4" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="420,239,523,265"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a999ebe4269afb9334a0d6981d941c405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999ebe4269afb9334a0d6981d941c405">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(kind=selected_real_kind(15, 307)) function csr::get </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet d'obtnir la valeur d'un élément d'une matrice. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Une matrice CSR </td></tr>
+    <tr><td class="paramname">row</td><td>Ligne de la valeur souhaitée </td></tr>
+    <tr><td class="paramname">col</td><td>Colonne de la valeur souhaitée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Valeur contenu à la position <img class="formulaInl" alt="$ (row,col) $" src="form_4.png"/>. Si La position est invalide retourne 0. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a999ebe4269afb9334a0d6981d941c405_icgraph.png" border="0" usemap="#namespacecsr_a999ebe4269afb9334a0d6981d941c405_icgraph" alt=""/></div>
+<map name="namespacecsr_a999ebe4269afb9334a0d6981d941c405_icgraph" id="namespacecsr_a999ebe4269afb9334a0d6981d941c405_icgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#afb5046e358a51cbc8ee7f7d3cd216186" title="Cette subroutine affiche une matrice CSR. " alt="" coords="146,187,235,213"/>
+<area shape="rect" id="node3" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba" title="Cette fonction calcule le produit de deux matrices. " alt="" coords="120,389,261,416"/>
+<area shape="rect" id="node7" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="309,187,472,213"/>
+<area shape="rect" id="node16" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="322,751,459,793"/>
+<area shape="rect" id="node17" href="namespacecsr.html#ae4283af9f49789afde336aa6c01f9d9b" title="Cette fonction permet de vérifier si deux matrices sont égales. " alt="" coords="520,339,667,365"/>
+<area shape="rect" id="node22" href="namespacelu.html#aef71f6951669fa61ee1221a606e77559" title="Fonction intérmédiare dans le calcul de LU. " alt="" coords="131,288,250,315"/>
+<area shape="rect" id="node23" href="namespacesolver.html#aabaed17811858571ade7dc2678835714" title="Résouds le système &#160;un utilisant la méthode substitution. " alt="" coords="315,569,466,610"/>
+<area shape="rect" id="node24" href="namespacesolver.html#a9f8ce5d9e5f950d31b2c12a74df87112" title="Résouds le système &#160;un utilisant la méthode substitution inversée. " alt="" coords="309,686,472,727"/>
+<area shape="rect" id="node4" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="321,5,460,61"/>
+<area shape="rect" id="node6" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="1112,212,1163,239"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="717,491,892,517"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="717,440,892,467"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="738,136,871,163"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="738,187,871,213"/>
+<area shape="rect" id="node14" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="733,542,877,583"/>
+<area shape="rect" id="node15" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="733,607,877,649"/>
+<area shape="rect" id="node5" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="943,31,1064,57"/>
+<area shape="rect" id="node8" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="535,491,652,517"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="952,364,1055,391"/>
+<area shape="rect" id="node18" href="namespaceunit__test.html#a1b61b671f03ec80dd49b686dde9c102e" title="unit_test::test_set_1" alt="" coords="734,339,875,365"/>
+<area shape="rect" id="node19" href="namespaceunit__test.html#a13f8cd1c017c50edbd872e2396b9c5b2" title="unit_test::test_transpose_1" alt="" coords="715,389,895,416"/>
+<area shape="rect" id="node20" href="namespaceunit__test.html#a59b305531bf9799e9c396514d86f3045" title="unit_test::test_transpose_2" alt="" coords="715,237,895,264"/>
+<area shape="rect" id="node21" href="namespaceunit__test.html#a68feea8781b8790ca9a305d9ae2fefb3" title="unit_test::test_recopy" alt="" coords="731,288,879,315"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a166f3030adcb3acb408f2f505f6d5ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a166f3030adcb3acb408f2f505f6d5ca8">&#9670;&nbsp;</a></span>get_column_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer function, dimension(:), allocatable csr::get_column_index </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>row</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet d'obtenir les colonnes non-nulles d'une ligne donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice CSR </td></tr>
+    <tr><td class="paramname">row</td><td>index d'une ligne de la matrice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ensemble des colonnes à valeur non nulle </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a166f3030adcb3acb408f2f505f6d5ca8_icgraph.png" border="0" usemap="#namespacecsr_a166f3030adcb3acb408f2f505f6d5ca8_icgraph" alt=""/></div>
+<map name="namespacecsr_a166f3030adcb3acb408f2f505f6d5ca8_icgraph" id="namespacecsr_a166f3030adcb3acb408f2f505f6d5ca8_icgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba" title="Cette fonction calcule le produit de deux matrices. " alt="" coords="207,264,348,290"/>
+<area shape="rect" id="node3" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="408,57,547,113"/>
+<area shape="rect" id="node5" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="1191,140,1241,166"/>
+<area shape="rect" id="node6" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="396,289,559,316"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="799,230,973,257"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="799,129,973,156"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="612,281,745,308"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="612,332,745,358"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="814,383,958,424"/>
+<area shape="rect" id="node14" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="607,442,751,483"/>
+<area shape="rect" id="node15" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="409,499,546,540"/>
+<area shape="rect" id="node4" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="1021,102,1143,129"/>
+<area shape="rect" id="node7" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="620,180,737,206"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="1031,306,1133,333"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0fddc3031fe45969bfad1e781aee76f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fddc3031fe45969bfad1e781aee76f2">&#9670;&nbsp;</a></span>get_column_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(kind=selected_real_kind(15, 307)) function, dimension(:), allocatable csr::get_column_value </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>row</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet d'obtenir les valeurs non-nulles d'une ligne donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice CSR </td></tr>
+    <tr><td class="paramname">row</td><td>index d'une ligne de la matrice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ensemble des valeurs non nulle </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a0fddc3031fe45969bfad1e781aee76f2_icgraph.png" border="0" usemap="#namespacecsr_a0fddc3031fe45969bfad1e781aee76f2_icgraph" alt=""/></div>
+<map name="namespacecsr_a0fddc3031fe45969bfad1e781aee76f2_icgraph" id="namespacecsr_a0fddc3031fe45969bfad1e781aee76f2_icgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba" title="Cette fonction calcule le produit de deux matrices. " alt="" coords="207,264,348,290"/>
+<area shape="rect" id="node3" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="408,57,547,113"/>
+<area shape="rect" id="node5" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="1191,140,1241,166"/>
+<area shape="rect" id="node6" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="396,289,559,316"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="799,230,973,257"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="799,129,973,156"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="612,281,745,308"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="612,332,745,358"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="814,383,958,424"/>
+<area shape="rect" id="node14" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="607,442,751,483"/>
+<area shape="rect" id="node15" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="409,499,546,540"/>
+<area shape="rect" id="node4" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="1021,102,1143,129"/>
+<area shape="rect" id="node7" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="620,180,737,206"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="1031,306,1133,333"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab0f29a51746afa4930b949e72bd78dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f29a51746afa4930b949e72bd78dfa">&#9670;&nbsp;</a></span>is_column_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical function csr::is_column_vector </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>V</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet de vérifier si une matrice est un vecteur colonne. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V</td><td>Une matrice CSR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne VRAI si la matrice est un vecteur colonne </dd></dl>
+
+</div>
+</div>
+<a id="a1c21bd90e70806fc8e86f7c152432bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c21bd90e70806fc8e86f7c152432bc1">&#9670;&nbsp;</a></span>is_in_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical function csr::is_in_matrix </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction permet de vérifier que des indices sont bien valide pour une matrice donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice CSR </td></tr>
+    <tr><td class="paramname">row</td><td>Ligne </td></tr>
+    <tr><td class="paramname">col</td><td>Colonne </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne VRAI si les indices <img class="formulaInl" alt="$ (row,col)$" src="form_3.png"/> sont valides pour la matrice donnée </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a1c21bd90e70806fc8e86f7c152432bc1_icgraph.png" border="0" usemap="#namespacecsr_a1c21bd90e70806fc8e86f7c152432bc1_icgraph" alt=""/></div>
+<map name="namespacecsr_a1c21bd90e70806fc8e86f7c152432bc1_icgraph" id="namespacecsr_a1c21bd90e70806fc8e86f7c152432bc1_icgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#adaba31314c53500fc138865272a804a9" title="Cette subroutine permet de modifier une valeur dans une matrice CSR. " alt="" coords="172,432,239,459"/>
+<area shape="rect" id="node3" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba" title="Cette fonction calcule le produit de deux matrices. " alt="" coords="297,574,439,600"/>
+<area shape="rect" id="node6" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="1319,574,1369,600"/>
+<area shape="rect" id="node7" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="506,407,669,434"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="924,791,1099,818"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="924,842,1099,868"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="733,331,866,358"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="733,418,866,444"/>
+<area shape="rect" id="node14" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="515,909,659,950"/>
+<area shape="rect" id="node15" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="515,792,659,833"/>
+<area shape="rect" id="node17" href="namespacelu.html#aef71f6951669fa61ee1221a606e77559" title="Fonction intérmédiare dans le calcul de LU. " alt="" coords="309,458,427,484"/>
+<area shape="rect" id="node18" href="namespacesolver.html#aabaed17811858571ade7dc2678835714" title="Résouds le système &#160;un utilisant la méthode substitution. " alt="" coords="293,909,443,950"/>
+<area shape="rect" id="node19" href="namespacesolver.html#a9f8ce5d9e5f950d31b2c12a74df87112" title="Résouds le système &#160;un utilisant la méthode substitution inversée. " alt="" coords="287,792,449,833"/>
+<area shape="rect" id="node20" href="namespaceunit__test.html#a1b61b671f03ec80dd49b686dde9c102e" title="unit_test::test_set_1" alt="" coords="729,154,870,180"/>
+<area shape="rect" id="node21" href="namespaceunit__test.html#a13f8cd1c017c50edbd872e2396b9c5b2" title="unit_test::test_transpose_1" alt="" coords="921,258,1101,284"/>
+<area shape="rect" id="node22" href="namespaceunit__test.html#a59b305531bf9799e9c396514d86f3045" title="unit_test::test_transpose_2" alt="" coords="497,103,677,130"/>
+<area shape="rect" id="node23" href="namespaceunit__test.html#a68feea8781b8790ca9a305d9ae2fefb3" title="unit_test::test_recopy" alt="" coords="725,52,873,79"/>
+<area shape="rect" id="node4" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="518,559,657,615"/>
+<area shape="rect" id="node16" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="943,496,1080,537"/>
+<area shape="rect" id="node5" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="1149,574,1271,600"/>
+<area shape="rect" id="node8" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="741,892,858,919"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="1159,471,1261,498"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adaba31314c53500fc138865272a804a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaba31314c53500fc138865272a804a9">&#9670;&nbsp;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine csr::set </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>)&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(kind=selected_real_kind(15, 307)), intent(in)&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette subroutine permet de modifier une valeur dans une matrice CSR. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Une matrice CSR </td></tr>
+    <tr><td class="paramname">row</td><td>Ligne de la valeur souhaitée </td></tr>
+    <tr><td class="paramname">col</td><td>Colonne de la valeur souhaitée </td></tr>
+    <tr><td class="paramname">val</td><td>Valeur souhaitée </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_adaba31314c53500fc138865272a804a9_cgraph.png" border="0" usemap="#namespacecsr_adaba31314c53500fc138865272a804a9_cgraph" alt=""/></div>
+<map name="namespacecsr_adaba31314c53500fc138865272a804a9_cgraph" id="namespacecsr_adaba31314c53500fc138865272a804a9_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#a1c21bd90e70806fc8e86f7c152432bc1" title="Cette fonction permet de vérifier que des indices sont bien valide pour une matrice donnée..." alt="" coords="120,5,239,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_adaba31314c53500fc138865272a804a9_icgraph.png" border="0" usemap="#namespacecsr_adaba31314c53500fc138865272a804a9_icgraph" alt=""/></div>
+<map name="namespacecsr_adaba31314c53500fc138865272a804a9_icgraph" id="namespacecsr_adaba31314c53500fc138865272a804a9_icgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba" title="Cette fonction calcule le produit de deux matrices. " alt="" coords="131,574,272,600"/>
+<area shape="rect" id="node5" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="1152,574,1203,600"/>
+<area shape="rect" id="node6" href="namespacelu.html#a0ecb386d6274d1e59a57d2d194b834b1" title="Retourne la décomposition LU d&#39;une matrice selon l&#39;algorithme Doolittle sans permutation. " alt="" coords="339,407,502,434"/>
+<area shape="rect" id="node8" href="namespaceunit__test.html#ab1090e1ac500355360136971f09e26e8" title="unit_test::test_solver_lu_1" alt="" coords="757,791,932,818"/>
+<area shape="rect" id="node10" href="namespaceunit__test.html#a110703e0aa31fd2c54d780bfc7d2d36c" title="unit_test::test_solver_lu_2" alt="" coords="757,842,932,868"/>
+<area shape="rect" id="node11" href="namespaceunit__test.html#ace929820ba95df63ee8ddd74e001bf94" title="unit_test::test_lu_1" alt="" coords="566,331,699,358"/>
+<area shape="rect" id="node12" href="namespaceunit__test.html#ae488c9a1079c4476095b5c7dd455ea3d" title="unit_test::test_lu_2" alt="" coords="566,418,699,444"/>
+<area shape="rect" id="node13" href="namespaceunit__test.html#af7bdcd8194bfae87eba99fa5187375f0" title="unit_test::test_solver\l_forward_1" alt="" coords="349,909,493,950"/>
+<area shape="rect" id="node14" href="namespaceunit__test.html#a6cc973e97176b9a6e5c1621728ece5f6" title="unit_test::test_solver\l_backward_1" alt="" coords="349,792,493,833"/>
+<area shape="rect" id="node16" href="namespacelu.html#aef71f6951669fa61ee1221a606e77559" title="Fonction intérmédiare dans le calcul de LU. " alt="" coords="142,458,261,484"/>
+<area shape="rect" id="node17" href="namespacesolver.html#aabaed17811858571ade7dc2678835714" title="Résouds le système &#160;un utilisant la méthode substitution. " alt="" coords="126,909,277,950"/>
+<area shape="rect" id="node18" href="namespacesolver.html#a9f8ce5d9e5f950d31b2c12a74df87112" title="Résouds le système &#160;un utilisant la méthode substitution inversée. " alt="" coords="120,792,283,833"/>
+<area shape="rect" id="node19" href="namespaceunit__test.html#a1b61b671f03ec80dd49b686dde9c102e" title="unit_test::test_set_1" alt="" coords="562,154,703,180"/>
+<area shape="rect" id="node20" href="namespaceunit__test.html#a13f8cd1c017c50edbd872e2396b9c5b2" title="unit_test::test_transpose_1" alt="" coords="755,258,935,284"/>
+<area shape="rect" id="node21" href="namespaceunit__test.html#a59b305531bf9799e9c396514d86f3045" title="unit_test::test_transpose_2" alt="" coords="331,103,511,130"/>
+<area shape="rect" id="node22" href="namespaceunit__test.html#a68feea8781b8790ca9a305d9ae2fefb3" title="unit_test::test_recopy" alt="" coords="559,52,707,79"/>
+<area shape="rect" id="node3" href="namespaceconjugate__gradient.html#a6b22b06051ef59312f0c0421255f9e9f" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué Source https://www.ljll.math.upmc.fr/hecht/ftp/InfoSci/doc&#45;pdf/Master_book_GC.pdf. " alt="" coords="351,559,490,615"/>
+<area shape="rect" id="node15" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="776,496,913,537"/>
+<area shape="rect" id="node4" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956" title="Résouds le système &#160;en utilisant la méthode du gradiant conjugué " alt="" coords="983,574,1104,600"/>
+<area shape="rect" id="node7" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c" title="Résouds le système &#160;en utilisant la décomposition LU de A. " alt="" coords="574,892,691,919"/>
+<area shape="rect" id="node9" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="992,471,1095,498"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5dfa2c1141ac4deb38a1c1126cd78e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfa2c1141ac4deb38a1c1126cd78e99">&#9670;&nbsp;</a></span>tr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) function csr::tr </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structcsr_1_1csr__matrix.html">csr_matrix</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>M</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction calcule la transposée d'une matrice. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>Matrice CSR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><img class="formulaInl" alt="$ M^T $" src="form_7.png"/> </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_cgraph.png" border="0" usemap="#namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_cgraph" alt=""/></div>
+<map name="namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_cgraph" id="namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_cgraph">
+<area shape="rect" id="node2" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed" title="Cette fonction crée une matrice de taille quelconque. " alt="" coords="109,5,261,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_icgraph.png" border="0" usemap="#namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_icgraph" alt=""/></div>
+<map name="namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_icgraph" id="namespacecsr_a5dfa2c1141ac4deb38a1c1126cd78e99_icgraph">
+<area shape="rect" id="node2" href="namespaceunit__test.html#a13f8cd1c017c50edbd872e2396b9c5b2" title="unit_test::test_transpose_1" alt="" coords="109,5,289,32"/>
+<area shape="rect" id="node5" href="namespaceunit__test.html#a59b305531bf9799e9c396514d86f3045" title="unit_test::test_transpose_2" alt="" coords="109,56,289,83"/>
+<area shape="rect" id="node6" href="namespaceunit__test.html#a1d52f8d7a0522089e6c16d577c7483d0" title="unit_test::test_inner\l_product_1" alt="" coords="131,107,268,149"/>
+<area shape="rect" id="node3" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3" title="Cette subroutine appelle l&#39;ensemble des tests implémentés et affiche chaqu&#39;un des résultats..." alt="" coords="337,56,440,83"/>
+<area shape="rect" id="node4" href="_projet_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="488,56,539,83"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

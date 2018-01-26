@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Implémentation d&#39;une matrice CSR et utilisation de cette matrice pour la résolution de système linéaire: Utilisation de matrice CSR pour la résolution de AX = B</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Implémentation d&#39;une matrice CSR et utilisation de cette matrice pour la résolution de système linéaire
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Utilisation de matrice CSR pour la résolution de AX = B </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="Présentation"></a>
+Présentation</h1>
+<p>Le module CSR implémente un stockage efficient, en terme de mémoire, pour des matrices creuses. Dans un premier temps, on utilise la décomposition LU pour résoudre le problème. Dans un second temps, on utilise la méthode du gradient conjugué pour résoudre le problème.</p>
+<h1><a class="anchor" id="CSR"></a>
+CSR</h1>
+<div class="fragment"><div class="line"><span class="keyword">TYPE</span> csr_matrix</div><div class="line">        <span class="keywordtype">INTEGER</span> , <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span>     :: m_rowidx</div><div class="line">        <span class="keywordtype">INTEGER</span> , <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span>     :: m_col</div><div class="line">        <span class="keywordtype">REAL(KIND=selected_real_kind(15, 307))</span> , <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span>      :: m_val</div><div class="line">        </div><div class="line">        <span class="keywordtype">INTEGER</span>                                 :: m_m <span class="comment">! Number of row</span></div><div class="line">        <span class="keywordtype">INTEGER</span>                                 :: m_n <span class="comment">! Number of column</span></div></div><!-- fragment --> <div class="fragment"><div class="line"><span class="keyword">END TYPE </span>csr_matrix</div></div><!-- fragment --><p> L'implémentation du mode de stockage CSR est fait de tel sorte que rowIdx commence par un 0 et que les colonnes sont indéxés à partir de 1. Pour utiliser des matrices avec des matrices ayant des colonnes indéxés à partir de 0, il suffit juste de rajouter 1 à m_col. Ceci peut être mis en place très facilement grâce à une subfunction.</p>
+<h1><a class="anchor" id="LU"></a>
+LU</h1>
+<p>On utilise la décomposition LU de la matrice A pour obtenir la solution. Cela revient, alors, à résoudre deux système triangulaire.</p>
+<h1><a class="anchor" id="sec"></a>
+Gradient Conjugué</h1>
+<p>La méthode du gradient conjugué peut être utilisé de deux façon. Soit de manière complète, dans ce cas, l'intégralité des calculs sont fait pour obtenir la solution, soit de manière à rechercher une solution avec une précision donnée, dans ce cas, quand la précision de la solution est suffisante la fonction la retourne directement.</p>
+<h1><a class="anchor" id="Solver"></a>
+Solver</h1>
+<p>Ce module regroupe les appelles pour résoudre un système <img class="formulaInl" alt="$AX=B$" src="form_0.png"/>. Les deux méthodes proposés sont LU et gradient conjugué.</p>
+<h1><a class="anchor" id="TEST"></a>
+TEST</h1>
+<p>Ce module implémente quelque test pour vérifier le fonctionnement basique de l'ensemble des modules. Ceci permet d'évaluer rapidement si l'ajout ou modification de fonction/subroutine aux différents modules modifie le comportement attendu.</p>
+<h1><a class="anchor" id="Compilation"></a>
+Compilation</h1>
+<p>Pour compiler le code executer le script <em>compile.sh</em>.</p>
+<h1><a class="anchor" id="Exemple"></a>
+Exemple</h1>
+<p>On importe, dans un premier temps les modules nécéssaires. </p><div class="fragment"><div class="line">        <span class="keywordtype">USE </span><a class="code" href="namespacecsr.html">csr</a></div><div class="line">        <span class="keywordtype">USE </span><a class="code" href="namespacelu.html">lu</a></div><div class="line">        <span class="keywordtype">USE </span><a class="code" href="namespaceconjugate__gradient.html">conjugate_gradient</a></div><div class="line">        <span class="keywordtype">USE </span><a class="code" href="namespacesolver.html">solver</a></div><div class="line">        <span class="keywordtype">USE </span><a class="code" href="namespaceunit__test.html">unit_test</a></div></div><!-- fragment --><p> Dans cet exemple, on va créer une matrice <b>A</b> et un vecteur-colonne <b>B</b> charger depuis un fichier. On crée aussi un vecteur-colonne pour chaque solution X et Y. </p><div class="fragment"><div class="line">        <span class="keywordtype">TYPE</span>(<a class="code" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) a</div><div class="line">        <span class="keywordtype">TYPE</span>(<a class="code" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) b</div><div class="line">        <span class="keywordtype">TYPE</span>(<a class="code" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) x</div><div class="line">        <span class="keywordtype">TYPE</span>(<a class="code" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) y</div><div class="line">        <span class="keywordtype">TYPE</span>(<a class="code" href="structcsr_1_1csr__matrix.html">csr_matrix</a>) r</div></div><!-- fragment --><p> On peut alors charger les matrices depuis les fichiers. </p><div class="fragment"><div class="line">        a = <a class="code" href="namespacecsr.html#a7c17472010c7e69ffd17ec4356c9f728">create_csr_matrix_from_file</a>(<span class="stringliteral">&quot;A.csr&quot;</span>)</div><div class="line">        b = <a class="code" href="namespacecsr.html#a7c17472010c7e69ffd17ec4356c9f728">create_csr_matrix_from_file</a>(<span class="stringliteral">&quot;B.csr&quot;</span>)</div></div><!-- fragment --><p> On va ensuite calculer la solution du sytème <img class="formulaInl" alt="$ AX = B $" src="form_13.png"/> en utilisant les deux méthodes implémentés. X est la solution utilisant la décomposition LU tandis que Y est la solution utilisant la méthode du gradient conjugué. </p><div class="fragment"><div class="line">        x = <a class="code" href="namespacesolver.html#a5b93fb7525fcaeda9fa517820bc82a3c">solver_lu</a>(a, b)</div><div class="line">        y = <a class="code" href="namespacesolver.html#a4c97052aa9d4e2435317818935734956">solver_gc</a>(a, b)</div></div><!-- fragment --><p> On peut alors, afficher le résultat des deux méthodes. </p><div class="fragment"><div class="line">        <span class="keyword">WRITE</span> (*,*) <span class="stringliteral">&quot;Solution&quot;</span></div><div class="line">        <span class="keyword">WRITE</span>(*,*) <span class="stringliteral">&quot;LU :&quot;</span></div><div class="line">        <span class="keyword">CALL </span>x%DISPLAY</div><div class="line">        <span class="keyword">WRITE</span>(*,*) <span class="stringliteral">&quot;GC :&quot;</span></div><div class="line">        <span class="keyword">CALL </span>y%DISPLAY</div></div><!-- fragment --><p> On peut alors, afficher l'erreur des deux méthodes. </p><div class="fragment"><div class="line">        <span class="keyword">WRITE</span> (*,*) <span class="stringliteral">&quot;Erreur&quot;</span></div><div class="line">        r = <a class="code" href="namespacecsr.html#a93101d039d6c2cd6d0c902f485c064b2">csr_matrix_vector_sub</a>(<a class="code" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba">csr_matrix_prod</a>(a,x), b)</div><div class="line">        <span class="keyword">WRITE</span>(*,*) <span class="stringliteral">&quot;LU :&quot;</span>, sqrt(<a class="code" href="namespacecsr.html#a41764fff6e7b431201994e36652d9694">csr_matrix_inner_product</a>(r,r))</div><div class="line">        r = <a class="code" href="namespacecsr.html#a93101d039d6c2cd6d0c902f485c064b2">csr_matrix_vector_sub</a>(<a class="code" href="namespacecsr.html#a77932e4e1232793cd4196bd9aa3729ba">csr_matrix_prod</a>(a,y), b)</div><div class="line">        <span class="keyword">WRITE</span>(*,*) <span class="stringliteral">&quot;GC :&quot;</span>, sqrt(<a class="code" href="namespacecsr.html#a41764fff6e7b431201994e36652d9694">csr_matrix_inner_product</a>(r,r))</div></div><!-- fragment --><p> On sauvegarde alors la matrice A dans le fichier <b>svg1</b>. </p><div class="fragment"><div class="line">        <span class="keyword">CALL </span>a%CSR_MATRIX_SAVE_TO_FILE(<span class="stringliteral">&quot;A.csr&quot;</span>)</div><div class="line">        <span class="keyword">CALL </span>b%CSR_MATRIX_SAVE_TO_FILE(<span class="stringliteral">&quot;B.csr&quot;</span>)</div></div><!-- fragment --><p> Il est possible d'initialiser à la main les matrices <b>A</b> et <b>B</b>. On doit alors créer une matrice vide de dimension voulue puis initialiser les valeurs non nulles </p><div class="fragment"><div class="line">        a = <a class="code" href="namespacecsr.html#a2097f50c520ff79497b0a8a5cfafd042">create_csr_matrix_square</a>(3)</div><div class="line">        b = <a class="code" href="namespacecsr.html#afdb507b2f3df37a31432acce41c014ed">create_csr_matrix</a>(3, 1)</div><div class="line">                </div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 1, 1, 5.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 2, 1, 1.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 2, 2, 1.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 2, 3, 8.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 3, 1, 7.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 3, 2, 1.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 3, 3, 2.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(a, 3, 2, 10.d0)</div><div class="line">        </div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(b, 1, 1, 1.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(b, 2, 1, 1.d0)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#adaba31314c53500fc138865272a804a9">set</a>(b, 3, 1, 1.d0)</div></div><!-- fragment --><p> Il est aussi possible de tester le fonctionnement basique des modules. </p><div class="fragment"><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespaceunit__test.html#ac18d31a3eab246ee0ec09a8e8e287ee3">test</a></div></div><!-- fragment --><p> A la fin, on doit désallouer les matrices utilisés. </p><div class="fragment"><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">free_csr_matrix</a>(a)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">free_csr_matrix</a>(b)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">free_csr_matrix</a>(x)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">free_csr_matrix</a>(y)</div><div class="line">        <span class="keyword">CALL </span><a class="code" href="namespacecsr.html#a72f6ffb7bbc5ad17554784f8a26b7a48">free_csr_matrix</a>(r)</div></div><!-- fragment --></div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
